@@ -1,0 +1,6 @@
+#ifndef TX_DEMO_PARAMETERS_H
+#define TX_DEMO_PARAMETERS_H
+
+#define TX_DEMO_BLOCK_SIZE (16)
+
+#endif

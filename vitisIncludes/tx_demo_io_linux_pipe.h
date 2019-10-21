@@ -1,11 +1,11 @@
-#ifndef TRANSMITTER_MAN_PARTITION_IO_LINUX_PIPE_H
-#define TRANSMITTER_MAN_PARTITION_IO_LINUX_PIPE_H
+#ifndef TX_DEMO_IO_LINUX_PIPE_H
+#define TX_DEMO_IO_LINUX_PIPE_H
 #include <stdint.h>
 #include <stdbool.h>
 #include <math.h>
 #include <pthread.h>
 #include "vitisTypes.h"
-#include "transmitter_man_partition_fifoTypes.h"
+#include "tx_demo_fifoTypes.h"
 
 typedef struct {
 //Input FIFOs
@@ -28,25 +28,25 @@ PartitionCrossingFIFO_N2_TO_1_2_n1571_t* PartitionCrossingFIFO_N2_TO_1_2_n1571_a
 uint8_t *PartitionCrossingFIFO_N2_TO_1_3_n1572_readOffsetPtr_re;
 uint8_t *PartitionCrossingFIFO_N2_TO_1_3_n1572_writeOffsetPtr_re;
 PartitionCrossingFIFO_N2_TO_1_3_n1572_t* PartitionCrossingFIFO_N2_TO_1_3_n1572_arrayPtr_re;
-} transmitter_man_partition_partitionN2_threadArgs_t;
+} tx_demo_partitionN2_threadArgs_t;
 
 
-void* transmitter_man_partition_io_linux_pipe_thread(void *args);
+void* tx_demo_io_linux_pipe_thread(void *args);
 
 #pragma pack(push, 4)
 typedef struct {
-	uint8_t symbol_BUNDLE_1_inPort0_re;
-	float gain_BUNDLE_1_inPort1_re;
-	vitisBool_t zero_BUNDLE_1_inPort2_re;
-	uint8_t ModMode_BUNDLE_1_inPort3_re;
-} transmitter_man_partition_inputs_bundle_1_t;
+	uint8_t symbol_BUNDLE_1_inPort0_re[16];
+	float gain_BUNDLE_1_inPort1_re[16];
+	vitisBool_t zero_BUNDLE_1_inPort2_re[16];
+	uint8_t ModMode_BUNDLE_1_inPort3_re[16];
+} tx_demo_inputs_bundle_1_t;
 #pragma pack(pop)
 
 #pragma pack(push, 4)
 typedef struct {
-	float baseband_i_BUNDLE_2_outPort0_re;
-	float baseband_q_BUNDLE_2_outPort1_re;
-} transmitter_man_partition_outputs_bundle_2_t;
+	float baseband_i_BUNDLE_2_outPort0_re[16];
+	float baseband_q_BUNDLE_2_outPort1_re[16];
+} tx_demo_outputs_bundle_2_t;
 #pragma pack(pop)
 
 #endif

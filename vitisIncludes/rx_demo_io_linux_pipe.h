@@ -1,11 +1,11 @@
-#ifndef RX_COMBINED_MAN_PARTITION_IO_LINUX_PIPE_H
-#define RX_COMBINED_MAN_PARTITION_IO_LINUX_PIPE_H
+#ifndef RX_DEMO_IO_LINUX_PIPE_H
+#define RX_DEMO_IO_LINUX_PIPE_H
 #include <stdint.h>
 #include <stdbool.h>
 #include <math.h>
 #include <pthread.h>
 #include "vitisTypes.h"
-#include "rx_combined_man_partition_fifoTypes.h"
+#include "rx_demo_fifoTypes.h"
 
 typedef struct {
 //Input FIFOs
@@ -109,52 +109,52 @@ PartitionCrossingFIFO_1_TO_N2_31_n4853_t* PartitionCrossingFIFO_1_TO_N2_31_n4853
 uint8_t *PartitionCrossingFIFO_N2_TO_1_0_n4821_readOffsetPtr_re;
 uint8_t *PartitionCrossingFIFO_N2_TO_1_0_n4821_writeOffsetPtr_re;
 PartitionCrossingFIFO_N2_TO_1_0_n4821_t* PartitionCrossingFIFO_N2_TO_1_0_n4821_arrayPtr_re;
-} rx_combined_man_partition_partitionN2_threadArgs_t;
+} rx_demo_partitionN2_threadArgs_t;
 
 
-void* rx_combined_man_partition_io_linux_pipe_thread(void *args);
+void* rx_demo_io_linux_pipe_thread(void *args);
 
 #pragma pack(push, 4)
 typedef struct {
-	float In1_BUNDLE_1_inPort0_re;
-	float In1_BUNDLE_1_inPort0_im;
-} rx_combined_man_partition_inputs_bundle_1_t;
+	float In1_BUNDLE_1_inPort0_re[16];
+	float In1_BUNDLE_1_inPort0_im[16];
+} rx_demo_inputs_bundle_1_t;
 #pragma pack(pop)
 
 #pragma pack(push, 4)
 typedef struct {
-	float rawI_BUNDLE_2_outPort0_re;
-	float rawQ_BUNDLE_2_outPort1_re;
-	float timingDelay_BUNDLE_2_outPort2_re;
-	float agcCorrection_BUNDLE_2_outPort3_re;
-	float after_agc_I_BUNDLE_2_outPort4_re;
-	float after_agc_Q_BUNDLE_2_outPort5_re;
-	vitisBool_t strobe_BUNDLE_2_outPort6_re;
-	float ca_BUNDLE_2_outPort7_re;
-	float cb_BUNDLE_2_outPort8_re;
-	vitisBool_t stf_BUNDLE_2_outPort9_re;
-	vitisBool_t cef_BUNDLE_2_outPort10_re;
-	vitisBool_t preambleDone_upsample_BUNDLE_2_outPort11_re;
-	vitisBool_t ack_BUNDLE_2_outPort12_re;
-	vitisBool_t failed_BUNDLE_2_outPort13_re;
-	vitisBool_t valid_BUNDLE_2_outPort14_re;
-	uint8_t symbols_BUNDLE_2_outPort15_re;
-	vitisBool_t last_BUNDLE_2_outPort16_re;
-	float cumulativeCarrierPhase_BUNDLE_2_outPort17_re;
-	float after_cr_BUNDLE_2_outPort18_re;
-	float after_cr_BUNDLE_2_outPort18_im;
-	float eq_ff_lms_err_BUNDLE_2_outPort19_re;
-	float eq_ff_lms_err_BUNDLE_2_outPort19_im;
-	vitisBool_t crc_err_BUNDLE_2_outPort20_re;
-	uint8_t agc_dst_BUNDLE_2_outPort21_re;
-	vitisBool_t agc_trigger_BUNDLE_2_outPort22_re;
-	uint8_t rx_channel_BUNDLE_2_outPort23_re;
-	vitisBool_t packed_valid_BUNDLE_2_outPort24_re;
-	uint8_t packed_symbol_BUNDLE_2_outPort25_re;
-	vitisBool_t ack_this_BUNDLE_2_outPort26_re;
-	float coarse_cfo_correct_steps_BUNDLE_2_outPort27_re;
-	vitisBool_t packed_last_BUNDLE_2_outPort28_re;
-} rx_combined_man_partition_outputs_bundle_2_t;
+	float rawI_BUNDLE_2_outPort0_re[16];
+	float rawQ_BUNDLE_2_outPort1_re[16];
+	float timingDelay_BUNDLE_2_outPort2_re[16];
+	float agcCorrection_BUNDLE_2_outPort3_re[16];
+	float after_agc_I_BUNDLE_2_outPort4_re[16];
+	float after_agc_Q_BUNDLE_2_outPort5_re[16];
+	vitisBool_t strobe_BUNDLE_2_outPort6_re[16];
+	float ca_BUNDLE_2_outPort7_re[16];
+	float cb_BUNDLE_2_outPort8_re[16];
+	vitisBool_t stf_BUNDLE_2_outPort9_re[16];
+	vitisBool_t cef_BUNDLE_2_outPort10_re[16];
+	vitisBool_t preambleDone_upsample_BUNDLE_2_outPort11_re[16];
+	vitisBool_t ack_BUNDLE_2_outPort12_re[16];
+	vitisBool_t failed_BUNDLE_2_outPort13_re[16];
+	vitisBool_t valid_BUNDLE_2_outPort14_re[16];
+	uint8_t symbols_BUNDLE_2_outPort15_re[16];
+	vitisBool_t last_BUNDLE_2_outPort16_re[16];
+	float cumulativeCarrierPhase_BUNDLE_2_outPort17_re[16];
+	float after_cr_BUNDLE_2_outPort18_re[16];
+	float after_cr_BUNDLE_2_outPort18_im[16];
+	float eq_ff_lms_err_BUNDLE_2_outPort19_re[16];
+	float eq_ff_lms_err_BUNDLE_2_outPort19_im[16];
+	vitisBool_t crc_err_BUNDLE_2_outPort20_re[16];
+	uint8_t agc_dst_BUNDLE_2_outPort21_re[16];
+	vitisBool_t agc_trigger_BUNDLE_2_outPort22_re[16];
+	uint8_t rx_channel_BUNDLE_2_outPort23_re[16];
+	vitisBool_t packed_valid_BUNDLE_2_outPort24_re[16];
+	uint8_t packed_symbol_BUNDLE_2_outPort25_re[16];
+	vitisBool_t ack_this_BUNDLE_2_outPort26_re[16];
+	float coarse_cfo_correct_steps_BUNDLE_2_outPort27_re[16];
+	vitisBool_t packed_last_BUNDLE_2_outPort28_re[16];
+} rx_demo_outputs_bundle_2_t;
 #pragma pack(pop)
 
 #endif
