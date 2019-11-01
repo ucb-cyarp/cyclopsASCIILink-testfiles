@@ -1,6 +1,6 @@
 #ifndef RX_DEMO_PARAMETERS_H
 #define RX_DEMO_PARAMETERS_H
 
-#define RX_DEMO_BLOCK_SIZE (16)
+#define RX_DEMO_BLOCK_SIZE (32)
 
 #endif

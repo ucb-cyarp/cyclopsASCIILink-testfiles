@@ -4,105 +4,77 @@
 #include <stdbool.h>
 #include "vitisTypes.h"
 typedef struct {
-float port0_real[16];
-float port0_imag[16];
-} PartitionCrossingFIFO_N2_TO_1_0_n4821_t;
+float port0_real[32];
+float port0_imag[32];
+} PartitionCrossingFIFO_N2_TO_1_0_n6708_t;
 typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_0_n4822_t;
+float port0_real[32];
+float port0_imag[32];
+} PartitionCrossingFIFO_1_TO_2_0_n6709_t;
 typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_1_n4823_t;
+vitisBool_t port0_real[32];
+} PartitionCrossingFIFO_1_TO_2_1_n6710_t;
 typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_2_n4824_t;
+float port0_real[32];
+} PartitionCrossingFIFO_1_TO_2_2_n6711_t;
 typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_3_n4825_t;
+float port0_real[32];
+} PartitionCrossingFIFO_1_TO_2_3_n6712_t;
 typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_4_n4826_t;
+float port0_real[32];
+} PartitionCrossingFIFO_1_TO_2_4_n6713_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_5_n4827_t;
+float port0_real[32];
+} PartitionCrossingFIFO_1_TO_2_5_n6714_t;
 typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_6_n4828_t;
+vitisBool_t port0_real[32];
+} PartitionCrossingFIFO_1_TO_2_6_n6715_t;
 typedef struct {
-float port0_real[16];
-float port0_imag[16];
-} PartitionCrossingFIFO_1_TO_N2_7_n4829_t;
+float port0_real[32];
+} PartitionCrossingFIFO_2_TO_N2_0_n6716_t;
 typedef struct {
-float port0_real[16];
-float port0_imag[16];
-} PartitionCrossingFIFO_1_TO_N2_8_n4830_t;
+float port0_real[32];
+} PartitionCrossingFIFO_2_TO_3_0_n6717_t;
 typedef struct {
-uint8_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_9_n4831_t;
+float port0_real[32];
+} PartitionCrossingFIFO_2_TO_3_1_n6718_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_10_n4832_t;
+float port0_real[32];
+} PartitionCrossingFIFO_2_TO_3_2_n6719_t;
 typedef struct {
-uint8_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_11_n4833_t;
+uint8_t port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_0_n6720_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_12_n4834_t;
+vitisBool_t port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_1_n6721_t;
 typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_13_n4835_t;
+uint8_t port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_2_n6722_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_14_n4836_t;
+vitisBool_t port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_3_n6723_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_15_n4837_t;
+vitisBool_t port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_4_n6724_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_16_n4838_t;
+vitisBool_t port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_5_n6725_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_17_n4839_t;
+vitisBool_t port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_6_n6726_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_18_n4840_t;
+float port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_7_n6727_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_19_n4841_t;
+float port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_8_n6728_t;
 typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_20_n4842_t;
+float port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_9_n6729_t;
 typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_21_n4843_t;
+int32_t port0_real[32];
+} PartitionCrossingFIFO_3_TO_N2_10_n6730_t;
 typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_22_n4844_t;
-typedef struct {
-uint8_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_23_n4845_t;
-typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_24_n4846_t;
-typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_25_n4847_t;
-typedef struct {
-vitisBool_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_26_n4848_t;
-typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_27_n4849_t;
-typedef struct {
-uint8_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_28_n4850_t;
-typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_29_n4851_t;
-typedef struct {
-float port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_30_n4852_t;
-typedef struct {
-int32_t port0_real[16];
-} PartitionCrossingFIFO_1_TO_N2_31_n4853_t;
+vitisBool_t port0_real[32];
+} PartitionCrossingFIFO_3_TO_2_0_n6731_t;
 #endif
