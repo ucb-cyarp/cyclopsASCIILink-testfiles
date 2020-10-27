@@ -1,76 +1,67 @@
 #ifndef RX_DEMO_IO_LINUX_PIPE_H
 #define RX_DEMO_IO_LINUX_PIPE_H
-#include <stdint.h>
-#include <stdbool.h>
+#include "rx_demo_fifoTypes.h"
+#include "vitisTypes.h"
 #include <math.h>
 #include <pthread.h>
-#include "vitisTypes.h"
-#include "rx_demo_fifoTypes.h"
+#include <stdatomic.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
 
 typedef struct {
 //Input FIFOs
-uint8_t *PartitionCrossingFIFO_2_TO_N2_0_n6716_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_2_TO_N2_0_n6716_writeOffsetPtr_re;
-PartitionCrossingFIFO_2_TO_N2_0_n6716_t* PartitionCrossingFIFO_2_TO_N2_0_n6716_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_0_n6720_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_0_n6720_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_0_n6720_t* PartitionCrossingFIFO_3_TO_N2_0_n6720_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_1_n6721_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_1_n6721_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_1_n6721_t* PartitionCrossingFIFO_3_TO_N2_1_n6721_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_2_n6722_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_2_n6722_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_2_n6722_t* PartitionCrossingFIFO_3_TO_N2_2_n6722_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_3_n6723_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_3_n6723_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_3_n6723_t* PartitionCrossingFIFO_3_TO_N2_3_n6723_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_4_n6724_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_4_n6724_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_4_n6724_t* PartitionCrossingFIFO_3_TO_N2_4_n6724_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_5_n6725_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_5_n6725_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_5_n6725_t* PartitionCrossingFIFO_3_TO_N2_5_n6725_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_6_n6726_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_6_n6726_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_6_n6726_t* PartitionCrossingFIFO_3_TO_N2_6_n6726_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_7_n6727_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_7_n6727_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_7_n6727_t* PartitionCrossingFIFO_3_TO_N2_7_n6727_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_8_n6728_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_8_n6728_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_8_n6728_t* PartitionCrossingFIFO_3_TO_N2_8_n6728_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_9_n6729_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_9_n6729_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_9_n6729_t* PartitionCrossingFIFO_3_TO_N2_9_n6729_arrayPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_10_n6730_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_3_TO_N2_10_n6730_writeOffsetPtr_re;
-PartitionCrossingFIFO_3_TO_N2_10_n6730_t* PartitionCrossingFIFO_3_TO_N2_10_n6730_arrayPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_11_TO_N2_0_n1253_readOffsetPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_11_TO_N2_0_n1253_writeOffsetPtr_re;
+PartitionCrossingFIFO_11_TO_N2_0_n1253_t* PartitionCrossingFIFO_11_TO_N2_0_n1253_arrayPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_0_n1257_readOffsetPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_0_n1257_writeOffsetPtr_re;
+PartitionCrossingFIFO_12_TO_N2_0_n1257_t* PartitionCrossingFIFO_12_TO_N2_0_n1257_arrayPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_1_n1258_readOffsetPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_1_n1258_writeOffsetPtr_re;
+PartitionCrossingFIFO_12_TO_N2_1_n1258_t* PartitionCrossingFIFO_12_TO_N2_1_n1258_arrayPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_2_n1259_readOffsetPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_2_n1259_writeOffsetPtr_re;
+PartitionCrossingFIFO_12_TO_N2_2_n1259_t* PartitionCrossingFIFO_12_TO_N2_2_n1259_arrayPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_3_n1260_readOffsetPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_3_n1260_writeOffsetPtr_re;
+PartitionCrossingFIFO_12_TO_N2_3_n1260_t* PartitionCrossingFIFO_12_TO_N2_3_n1260_arrayPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_4_n1261_readOffsetPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_12_TO_N2_4_n1261_writeOffsetPtr_re;
+PartitionCrossingFIFO_12_TO_N2_4_n1261_t* PartitionCrossingFIFO_12_TO_N2_4_n1261_arrayPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_13_TO_N2_0_n1262_readOffsetPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_13_TO_N2_0_n1262_writeOffsetPtr_re;
+PartitionCrossingFIFO_13_TO_N2_0_n1262_t* PartitionCrossingFIFO_13_TO_N2_0_n1262_arrayPtr_re;
 //Output FIFOs
-uint8_t *PartitionCrossingFIFO_N2_TO_1_0_n6708_readOffsetPtr_re;
-uint8_t *PartitionCrossingFIFO_N2_TO_1_0_n6708_writeOffsetPtr_re;
-PartitionCrossingFIFO_N2_TO_1_0_n6708_t* PartitionCrossingFIFO_N2_TO_1_0_n6708_arrayPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_N2_TO_1_0_n1220_readOffsetPtr_re;
+_Atomic int8_t *PartitionCrossingFIFO_N2_TO_1_0_n1220_writeOffsetPtr_re;
+PartitionCrossingFIFO_N2_TO_1_0_n1220_t* PartitionCrossingFIFO_N2_TO_1_0_n1220_arrayPtr_re;
 } rx_demo_partitionN2_threadArgs_t;
 
 
 void* rx_demo_io_linux_pipe_thread(void *args);
 
+#define RX_DEMO_INPUT_BUNDLE1_BLOCKSIZE (32)
 #pragma pack(push, 4)
 typedef struct {
-	float In1_BUNDLE_1_inPort0_re[32];
-	float In1_BUNDLE_1_inPort0_im[32];
+	float samplesIn_BUNDLE_1_inPort0_re[32];
+	float samplesIn_BUNDLE_1_inPort0_im[32];
 } rx_demo_inputs_bundle_1_t;
 #pragma pack(pop)
 
+#define RX_DEMO_OUTPUT_BUNDLE1_BLOCKSIZE (32)
 #pragma pack(push, 4)
 typedef struct {
-	vitisBool_t strobe_BUNDLE_2_outPort0_re[32];
-	vitisBool_t valid_BUNDLE_2_outPort1_re[32];
-	uint8_t symbols_BUNDLE_2_outPort2_re[32];
-	vitisBool_t last_BUNDLE_2_outPort3_re[32];
-	vitisBool_t packed_valid_BUNDLE_2_outPort4_re[32];
-	uint8_t packed_symbol_BUNDLE_2_outPort5_re[32];
-	vitisBool_t packed_last_BUNDLE_2_outPort6_re[32];
-} rx_demo_outputs_bundle_2_t;
+	uint8_t dataPacked_BUNDLE_1_outPort0_re[32];
+	vitisBool_t dataPackedValid_BUNDLE_1_outPort1_re[32];
+	vitisBool_t dataPackedLast_BUNDLE_1_outPort2_re[32];
+	float afterTR_BUNDLE_1_outPort3_re[32];
+	float afterTR_BUNDLE_1_outPort3_im[32];
+	vitisBool_t afterTRValid_BUNDLE_1_outPort4_re[32];
+	float constPt_BUNDLE_1_outPort5_re[32];
+	float constPt_BUNDLE_1_outPort5_im[32];
+	vitisBool_t constPtValid_BUNDLE_1_outPort6_re[32];
+} rx_demo_outputs_bundle_1_t;
 #pragma pack(pop)
 
 #endif
