@@ -1,4 +1,5 @@
 # cyclopsASCIILink-testfiles
+Zenodo Concept DOI: [![Concept DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6525832.svg)](https://doi.org/10.5281/zenodo.6525832)
 
 [Laminar](https://github.com/ucb-cyarp/vitis) generated test files for [cyclopsASCIILink](https://github.com/ucb-cyarp/cyclopsASCIILink)
 
